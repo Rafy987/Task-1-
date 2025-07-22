@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - MovieWind</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-brand">
+                <h1>moviewind</h1>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="movies.html">Movies</a></li>
+                <li><a href="hollywood.html">Hollywood</a></li>
+                <li><a href="bollywood.html">Bollywood</a></li>
+                <li><a href="korean.html">Korean</a></li>
+                <li><a href="series.html">Series</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <div class="search-container">
+                    <input type="text" id="searchInput" placeholder="Search movies...">
+                    <i class="fas fa-search search-icon"></i>
+                </div>
+                <button class="telegram-btn">
+                    <i class="fab fa-telegram"></i> Telegram
+                </button>
+            </div>
+            <div class="mobile-menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Contact Hero Section -->
+    <section class="contact-hero">
+        <div class="container">
+            <h1>Contact Us</h1>
+            <p>Get in touch with the MovieWind team</p>
+        </div>
+    </section>
+
+    <!-- Contact Content -->
+    <section class="contact-content">
+        <div class="container">
+            <div class="contact-form">
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Name *</label>
+                        <input type="text" id="name" name="name" required placeholder="Your full name">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email *</label>
+                        <input type="email" id="email" name="email" required placeholder="your.email@example.com">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="subject">Subject *</label>
+                        <input type="text" id="subject" name="subject" required placeholder="What is this about?">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Message *</label>
+                        <textarea id="message" name="message" required placeholder="Tell us more about your inquiry..."></textarea>
+                    </div>
+                    
+                    <div class="form-submit">
+                        <button type="submit" class="btn-primary">Send Message</button>
+                    </div>
+                </form>
+                
+                <div class="contact-info" style="margin-top: 3rem; text-align: center;">
+                    <h3 style="color: #e50914; margin-bottom: 2rem;">Other Ways to Reach Us</h3>
+                    
+                    <div style="display: flex; justify-content: center; gap: 3rem; flex-wrap: wrap; margin-bottom: 2rem;">
+                        <div style="color: white;">
+                            <i class="fas fa-envelope" style="color: #e50914; font-size: 1.5rem; margin-bottom: 1rem; display: block;"></i>
+                            <h4>Email</h4>
+                            <p>support@moviewind.com</p>
+                        </div>
+                        
+                        <div style="color: white;">
+                            <i class="fab fa-telegram" style="color: #e50914; font-size: 1.5rem; margin-bottom: 1rem; display: block;"></i>
+                            <h4>Telegram</h4>
+                            <p>@moviewind</p>
+                        </div>
+                        
+                        <div style="color: white;">
+                            <i class="fas fa-clock" style="color: #e50914; font-size: 1.5rem; margin-bottom: 1rem; display: block;"></i>
+                            <h4>Response Time</h4>
+                            <p>Within 24 hours</p>
+                        </div>
+                    </div>
+                    
+                    <div style="background: rgba(255, 255, 255, 0.05); padding: 2rem; border-radius: 10px; margin-top: 2rem;">
+                        <h4 style="color: #e50914; margin-bottom: 1rem;">Frequently Asked Questions</h4>
+                        <div style="text-align: left; color: white; opacity: 0.9;">
+                            <p><strong>Q: How can I request a specific movie?</strong><br>
+                            A: You can use the contact form above or reach out via Telegram with your movie request.</p>
+                            
+                            <p style="margin-top: 1rem;"><strong>Q: Are there any usage restrictions?</strong><br>
+                            A: Please refer to our terms of service for detailed usage guidelines.</p>
+                            
+                            <p style="margin-top: 1rem;"><strong>Q: How often is new content added?</strong><br>
+                            A: We update our library regularly with new movies and shows.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>MovieWind</h3>
+                    <p>Your ultimate destination for movies and entertainment content.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="movies.html">Movies</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Categories</h4>
+                    <ul>
+                        <li><a href="hollywood.html">Hollywood</a></li>
+                        <li><a href="bollywood.html">Bollywood</a></li>
+                        <li><a href="korean.html">Korean</a></li>
+                        <li><a href="series.html">TV Series</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-telegram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 MovieWind. All Rights Reserved</p>
+                <p>Designed with <i class="fas fa-heart"></i> by MovieWind Team</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Contact form handling
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form data
+            const formData = new FormData(this);
+            const data = Object.fromEntries(formData);
+            
+            // Show loading state
+            const submitBtn = this.querySelector('button[type="submit"]');
+            const originalText = submitBtn.textContent;
+            submitBtn.innerHTML = '<div class="loading"></div> Sending...';
+            submitBtn.disabled = true;
+            
+            // Simulate form submission
+            setTimeout(() => {
+                // Reset form
+                this.reset();
+                
+                // Reset button
+                submitBtn.textContent = originalText;
+                submitBtn.disabled = false;
+                
+                // Show success message
+                MovieWind.showNotification('Message sent successfully! We\'ll get back to you soon.');
+                
+                console.log('Contact form submitted:', data);
+            }, 2000);
+        });
+    </script>
+</body>
+</html>

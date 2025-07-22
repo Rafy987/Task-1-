@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MovieWind - Your Ultimate Movie Destination</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-brand">
+                <h1>moviewind</h1>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="movies.html">Movies</a></li>
+                <li><a href="hollywood.html">Hollywood</a></li>
+                <li><a href="bollywood.html">Bollywood</a></li>
+                <li><a href="korean.html">Korean</a></li>
+                <li><a href="series.html">Series</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <div class="search-container">
+                    <input type="text" id="searchInput" placeholder="Search movies...">
+                    <i class="fas fa-search search-icon"></i>
+                </div>
+                <button class="telegram-btn">
+                    <i class="fab fa-telegram"></i> Telegram
+                </button>
+            </div>
+            <div class="mobile-menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Alert Banner -->
+    <div class="alert-banner">
+        <div class="alert-content">
+            <i class="fas fa-info-circle"></i>
+            <span>Bookmark for future visit.</span>
+            <button class="alert-close">&times;</button>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Welcome to RafayFlix</h1>
+            <p>Discover the latest movies, series, and entertainment content from around the world</p>
+            <div class="hero-buttons">
+                <button class="btn-primary" onclick="location.href='movies.html'">Explore Movies</button>
+                <button class="btn-secondary" onclick="location.href='#featured'">Featured Content</button>
+            </div>
+        </div>
+        <div class="hero-background"></div>
+    </section>
+
+    <!-- Featured Movies Section -->
+    <section id="featured" class="featured-section">
+        <div class="container">
+            <h2 class="section-title">Featured Movies</h2>
+            <div class="movies-grid" id="featuredMovies">
+                <!-- Featured Movies -->
+                <div class="movie-card" onclick="navigateToMovieDetails(550)">
+                    <img src="https://image.tmdb.org/t/p/w500/pB8BM7pdSp6B6Ih7QZ4DrQ3PmJK.jpg" alt="Fight Club" class="movie-poster" loading="lazy">
+                    <div class="movie-info">
+                        <h3 class="movie-title">Fight Club</h3>
+                        <div class="movie-meta">
+                            <span class="movie-year">1999</span>
+                            <div class="movie-rating">
+                                <i class="fas fa-star"></i>
+                                <span>8.8</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="movie-card" onclick="navigateToMovieDetails(13)">
+                    <img src="https://image.tmdb.org/t/p/w500/3bhkrj58Vtu7enYsRolD1fZdja1.jpg" alt="Forrest Gump" class="movie-poster" loading="lazy">
+                    <div class="movie-info">
+                        <h3 class="movie-title">Forrest Gump</h3>
+                        <div class="movie-meta">
+                            <span class="movie-year">1994</span>
+                            <div class="movie-rating">
+                                <i class="fas fa-star"></i>
+                                <span>8.8</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="movie-card" onclick="navigateToMovieDetails(155)">
+                    <img src="https://image.tmdb.org/t/p/w500/uXDfjJbdP4ijW5hWSBrPrlKpxab.jpg" alt="The Dark Knight" class="movie-poster" loading="lazy">
+                    <div class="movie-info">
+                        <h3 class="movie-title">The Dark Knight</h3>
+                        <div class="movie-meta">
+                            <span class="movie-year">2008</span>
+                            <div class="movie-rating">
+                                <i class="fas fa-star"></i>
+                                <span>9.0</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="movie-card" onclick="navigateToMovieDetails(278)">
+                    <img src="https://image.tmdb.org/t/p/w500/q6y0Go1tsGEsmtFryDOJo3dEmqu.jpg" alt="The Shawshank Redemption" class="movie-poster" loading="lazy">
+                    <div class="movie-info">
+                        <h3 class="movie-title">The Shawshank Redemption</h3>
+                        <div class="movie-meta">
+                            <span class="movie-year">1994</span>
+                            <div class="movie-rating">
+                                <i class="fas fa-star"></i>
+                                <span>9.3</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="movie-card" onclick="navigateToMovieDetails(238)">
+                    <img src="https://image.tmdb.org/t/p/w500/3xm8SWF9xIHZ681yBKofNoYXDXR.jpg" alt="The Godfather" class="movie-poster" loading="lazy">
+                    <div class="movie-info">
+                        <h3 class="movie-title">The Godfather</h3>
+                        <div class="movie-meta">
+                            <span class="movie-year">1972</span>
+                            <div class="movie-rating">
+                                <i class="fas fa-star"></i>
+                                <span>9.2</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="movie-card" onclick="navigateToMovieDetails(424)">
+                    <img src="https://image.tmdb.org/t/p/w500/sF1U4EUQS8YHUYjNl3pMGNIQyr0.jpg" alt="Schindler's List" class="movie-poster" loading="lazy">
+                    <div class="movie-info">
+                        <h3 class="movie-title">Schindler's List</h3>
+                        <div class="movie-meta">
+                            <span class="movie-year">1993</span>
+                            <div class="movie-rating">
+                                <i class="fas fa-star"></i>
+                                <span>9.0</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Popular Movies Section -->
+    <section class="popular-section">
+        <div class="container">
+            <h2 class="section-title">Popular Movies</h2>
+            <div class="movies-grid" id="popularMovies">
+                <!-- Popular Movies -->
+                <div class="movie-card" onclick="navigateToMovieDetails(27205)">
+                    <img src="https://image.tmdb.org/t/p/w500/rSPw7tgCH9c6NqICZef4kZjFOQ5.jpg" alt="Inception" class="movie-poster" loading="lazy">
+                    <div class="movie-info">
+                        <h3 class="movie-title">Inception</h3>
+                        <div class="movie-meta">
+                            <span class="movie-year">2010</span>
+                            <div class="movie-rating">
+                                <i class="fas fa-star"></i>
+                                <span>8.8</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="movie-card" onclick="navigateToMovieDetails(496243)">
+                    <img src="https://image.tmdb.org/t/p/w500/7IiTTgloJzvGI1TAYymCfbfl3vT.jpg" alt="Parasite" class="movie-poster" loading="lazy">
+                    <div class="movie-info">
+                        <h3 class="movie-title">Parasite</h3>
+                        <div class="movie-meta">
+                            <span class="movie-year">2019</span>
+                            <div class="movie-rating">
+                                <i class="fas fa-star"></i>
+                                <span>8.5</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="movie-card" onclick="navigateToMovieDetails(680)">
+                    <img src="https://image.tmdb.org/t/p/w500/39wmItIWsg5sZMyRUHLkWBcuVCM.jpg" alt="Pulp Fiction" class="movie-poster" loading="lazy">
+                    <div class="movie-info">
+                        <h3 class="movie-title">Pulp Fiction</h3>
+                        <div class="movie-meta">
+                            <span class="movie-year">1994</span>
+                            <div class="movie-rating">
+                                <i class="fas fa-star"></i>
+                                <span>8.9</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="movie-card" onclick="navigateToMovieDetails(122)">
+                    <img src="https://image.tmdb.org/t/p/w500/f4yVsKVlYI6YGAOUACk6up3pJuI.jpg" alt="The Lord of the Rings: The Return of the King" class="movie-poster" loading="lazy">
+                    <div class="movie-info">
+                        <h3 class="movie-title">The Lord of the Rings: The Return of the King</h3>
+                        <div class="movie-meta">
+                            <span class="movie-year">2003</span>
+                            <div class="movie-rating">
+                                <i class="fas fa-star"></i>
+                                <span>8.9</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="movie-card" onclick="navigateToMovieDetails(389)">
+                    <img src="https://image.tmdb.org/t/p/w500/6oom5QYQ2yQTMJIbnvbkBL9cHo6.jpg" alt="12 Angry Men" class="movie-poster" loading="lazy">
+                    <div class="movie-info">
+                        <h3 class="movie-title">12 Angry Men</h3>
+                        <div class="movie-meta">
+                            <span class="movie-year">1957</span>
+                            <div class="movie-rating">
+                                <i class="fas fa-star"></i>
+                                <span>9.0</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="movie-card" onclick="navigateToMovieDetails(19404)">
+                    <img src="https://image.tmdb.org/t/p/w500/qJ2tW6WMUDux911r6m7haRef0WH.jpg" alt="Dilwale Dulhania Le Jayenge" class="movie-poster" loading="lazy">
+                    <div class="movie-info">
+                        <h3 class="movie-title">Dilwale Dulhania Le Jayenge</h3>
+                        <div class="movie-meta">
+                            <span class="movie-year">1995</span>
+                            <div class="movie-rating">
+                                <i class="fas fa-star"></i>
+                                <span>8.7</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Recent Updates Section -->
+    <section class="recent-section">
+        <div class="container">
+            <h2 class="section-title">Recent Updates</h2>
+            <div class="movies-grid" id="recentMovies">
+                <!-- Recent Movies -->
+                <div class="movie-card" onclick="navigateToMovieDetails(872585)">
+                    <img src="https://image.tmdb.org/t/p/w500/qNBAXBIQlnOThrVvA6mA2B5ggV6.jpg" alt="Oppenheimer" class="movie-poster" loading="lazy">
+                    <div class="movie-info">
+                        <h3 class="movie-title">Oppenheimer</h3>
+                        <div class="movie-meta">
+                            <span class="movie-year">2023</span>
+                            <div class="movie-rating">
+                                <i class="fas fa-star"></i>
+                                <span>8.4</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="movie-card" onclick="navigateToMovieDetails(346698)">
+                    <img src="https://image.tmdb.org/t/p/w500/4HodYYKEIsGOdinkGi2Ucz6X9i0.jpg" alt="Barbie" class="movie-poster" loading="lazy">
+                    <div class="movie-info">
+                        <h3 class="movie-title">Barbie</h3>
+                        <div class="movie-meta">
+                            <span class="movie-year">2023</span>
+                            <div class="movie-rating">
+                                <i class="fas fa-star"></i>
+                                <span>7.2</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="movie-card" onclick="navigateToMovieDetails(695721)">
+                    <img src="https://image.tmdb.org/t/p/w500/8Vt6mWEReuy4Of61Lnj5Xj704m8.jpg" alt="The Hunger Games: The Ballad of Songbirds & Snakes" class="movie-poster" loading="lazy">
+                    <div class="movie-info">
+                        <h3 class="movie-title">The Hunger Games: The Ballad of Songbirds & Snakes</h3>
+                        <div class="movie-meta">
+                            <span class="movie-year">2023</span>
+                            <div class="movie-rating">
+                                <i class="fas fa-star"></i>
+                                <span>7.3</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="movie-card" onclick="navigateToMovieDetails(507089)">
+                    <img src="https://image.tmdb.org/t/p/w500/1E5baAaEse26fej7uHcjOgEE2t2.jpg" alt="Five Nights at Freddy's" class="movie-poster" loading="lazy">
+                    <div class="movie-info">
+                        <h3 class="movie-title">Five Nights at Freddy's</h3>
+                        <div class="movie-meta">
+                            <span class="movie-year">2023</span>
+                            <div class="movie-rating">
+                                <i class="fas fa-star"></i>
+                                <span>6.8</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="movie-card" onclick="navigateToMovieDetails(575264)">
+                    <img src="https://image.tmdb.org/t/p/w500/rktDFPbfHfUbArZ6OOOKsXcv0Bm.jpg" alt="Mission: Impossible – Dead Reckoning Part One" class="movie-poster" loading="lazy">
+                    <div class="movie-info">
+                        <h3 class="movie-title">Mission: Impossible – Dead Reckoning Part One</h3>
+                        <div class="movie-meta">
+                            <span class="movie-year">2023</span>
+                            <div class="movie-rating">
+                                <i class="fas fa-star"></i>
+                                <span>7.7</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="movie-card" onclick="navigateToMovieDetails(298618)">
+                    <img src="https://image.tmdb.org/t/p/w500/r2J02Z2OpNTctfOSN1Ydgii51I3.jpg" alt="The Flash" class="movie-poster" loading="lazy">
+                    <div class="movie-info">
+                        <h3 class="movie-title">The Flash</h3>
+                        <div class="movie-meta">
+                            <span class="movie-year">2023</span>
+                            <div class="movie-rating">
+                                <i class="fas fa-star"></i>
+                                <span>6.7</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>MovieWind</h3>
+                    <p>Your ultimate destination for movies and entertainment content.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="movies.html">Movies</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Categories</h4>
+                    <ul>
+                        <li><a href="hollywood.html">Hollywood</a></li>
+                        <li><a href="bollywood.html">Bollywood</a></li>
+                        <li><a href="korean.html">Korean</a></li>
+                        <li><a href="series.html">TV Series</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-telegram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 MovieWind. All Rights Reserved</p>
+                <p>Designed with <i class="fas fa-heart"></i> by MovieWind Team</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
