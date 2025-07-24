@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LUSETA - Premium Hair Care Products</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Promotional Banner -->
+    <div class="promo-banner">
+        <div class="container">
+            <p>Free shipping on orders over $35</p>
+            <button class="close-banner" onclick="closeBanner()">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <div class="logo-icon">
+                    <div class="logo-circle"></div>
+                </div>
+                <span class="logo-text">LUSETA</span>
+                <span class="logo-subtitle">BEAUTY</span>
+            </div>
+            
+            <nav class="main-nav">
+                <a href="#" onclick="showPage('shop')" class="nav-link">SHOP</a>
+                <a href="#" onclick="showPage('about')" class="nav-link">ABOUT US</a>
+                <a href="#" onclick="showPage('rewards')" class="nav-link">REWARDS</a>
+                <a href="#" onclick="showPage('testimonials')" class="nav-link">TESTIMONIALS</a>
+                <a href="#" onclick="showPage('blog')" class="nav-link">BLOG</a>
+                <a href="#" onclick="showPage('quiz')" class="nav-link">QUIZ</a>
+            </nav>
+
+            <div class="header-actions">
+                <button class="action-btn" onclick="toggleWishlist()">
+                    <i class="far fa-heart"></i>
+                </button>
+                <button class="action-btn" onclick="toggleSearch()">
+                    <i class="fas fa-search"></i>
+                </button>
+                <button class="action-btn" onclick="toggleAccount()">
+                    <i class="far fa-user"></i>
+                </button>
+                <button class="action-btn cart-btn" onclick="toggleCart()">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span class="cart-count" id="cartCount">0</span>
+                </button>
+            </div>
+
+            <!-- Mobile Menu Toggle -->
+            <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+
+        <!-- Search Overlay -->
+        <div class="search-overlay" id="searchOverlay">
+            <div class="search-container">
+                <input type="text" placeholder="Search products..." class="search-input" id="searchInput">
+                <button class="search-submit" onclick="performSearch()">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Home Page -->
+        <div id="homePage" class="page active">
+            <!-- Hero Section -->
+            <section class="hero-section">
+                <div class="hero-slider">
+                    <div class="hero-slide active" data-slide="1">
+                        <div class="hero-content">
+                            <div class="hero-text">
+                                <h1 class="hero-title">Thickening Formula</h1>
+                                <h2 class="hero-subtitle">Biotin B-Complex Duo</h2>
+                                <p class="hero-description">
+                                    A natural blend with Biotin, Caffeine, and Niacin, which helps stimulate hair roots, improve hair growth and structure, thicken and strengthen hair.
+                                </p>
+                                <button class="shop-now-btn" onclick="showProductDetails('biotin-duo')">
+                                    SHOP NOW
+                                </button>
+                            </div>
+                            <div class="hero-image">
+                                <img src="https://lusetabeauty.com/cdn/shop/products/BiotinBComplexDuo.jpg?v=1723573763&width=1024" alt="Biotin B-Complex Duo Products" class="hero-product-image">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="hero-slide" data-slide="2">
+                        <div class="hero-content">
+                            <div class="hero-text">
+                                <h1 class="hero-title">Moisturizing Formula</h1>
+                                <h2 class="hero-subtitle">Argan Oil Collection</h2>
+                                <p class="hero-description">
+                                    Enriched with pure Argan Oil and natural botanicals to deeply nourish, repair and restore damaged hair while adding brilliant shine.
+                                </p>
+                                <button class="shop-now-btn" onclick="showProductDetails('argan-collection')">
+                                    SHOP NOW
+                                </button>
+                            </div>
+                           <div class="hero-image">
+                                <div class="product-showcase">
+                                    <div class="product-bottle">
+                                        <img src="https://lusetabeauty.com/cdn/shop/products/ArganOil_Shampoo_500x.jpg?v=1652116775" alt="Argan Oil Shampoo">
+                                    </div>
+                                    <div class="product-bottle">
+                                        <img src="https://lusetabeauty.com/cdn/shop/products/ArganOil_Conditioner_500x.jpg?v=1652116775" alt="Argan Oil Conditioner">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="hero-slide" data-slide="3">
+                        <div class="hero-content">
+                            <div class="hero-text">
+                                <h1 class="hero-title">Color Protection</h1>
+                                <h2 class="hero-subtitle">Sulfate-Free Series</h2>
+                                <p class="hero-description">
+                                    Gentle, sulfate-free formula that protects color-treated hair while providing deep cleansing and long-lasting moisture.
+                                </p>
+                                <button class="shop-now-btn" onclick="showProductDetails('color-protection')">
+                                    SHOP NOW
+                                </button>
+                            </div>
+                            <div class="hero-image">
+                                <div class="product-showcase">
+                                    <div class="product-bottle">
+                                        <img src="https://lusetabeauty.com/cdn/shop/products/ColorCare_Shampoo_500x.jpg?v=1652116775" alt="Color Care Shampoo">
+                                    </div>
+                                    <div class="product-bottle">
+                                        <img src="https://lusetabeauty.com/cdn/shop/products/ColorCare_Conditioner_500x.jpg?v=1652116775" alt="Color Care Conditioner">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slider Navigation -->
+                <div class="slider-nav">
+                    <button class="slider-arrow prev" onclick="previousSlide()">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <div class="slider-dots">
+                        <span class="dot active" onclick="goToSlide(1)"></span>
+                        <span class="dot" onclick="goToSlide(2)"></span>
+                        <span class="dot" onclick="goToSlide(3)"></span>
+                    </div>
+                    <button class="slider-arrow next" onclick="nextSlide()">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+
+                <div class="slide-counter">
+                    <span id="currentSlide">1</span> / <span id="totalSlides">3</span>
+                </div>
+            </section>
+
+            <!-- Featured Collections -->
+            <section class="featured-collections">
+                <div class="container">
+                    <h2 class="section-title">Featured Collections</h2>
+                    <div class="collections-grid">
+                        <div class="collection-card" onclick="showCollection('hair-growth')">
+                            <div class="collection-image">
+                                <img src="https://lusetabeauty.com/cdn/shop/products/BiotinBComplexDuo.jpg?v=1723573763&width=1024" alt="Hair Growth Collection">
+                            </div>
+                            <h3>Hair Growth</h3>
+                            <p>Stimulate and strengthen</p>
+                        </div>
+                        <div class="collection-card" onclick="showCollection('moisturizing')">
+                            <div class="collection-image">
+                                <img src="https://lusetabeauty.com/cdn/shop/products/ArganOil_Shampoo_500x.jpg?v=1652116775" alt="Moisturizing Collection">
+                            </div>
+                            <h3>Moisturizing</h3>
+                            <p>Deep hydration therapy</p>
+                        </div>
+                        <div class="collection-card" onclick="showCollection('color-care')">
+                            <div class="collection-image">
+                                <img src="https://lusetabeauty.com/cdn/shop/products/ColorCare_Shampoo_500x.jpg?v=1652116775" alt="Color Care Collection">
+                            </div>
+                            <h3>Color Care</h3>
+                            <p>Protect and preserve</p>
+                        </div>
+                        <div class="collection-card" onclick="showCollection('repair')">
+                            <div class="collection-image">
+                                <img src="https://lusetabeauty.com/cdn/shop/products/RepairShampoo_500x.jpg?v=1652116775" alt="Repair Collection">
+                            </div>
+                            <h3>Repair & Restore</h3>
+                            <p>Damaged hair solution</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Shop Page -->
+        <div id="shopPage" class="page">
+            <div class="container">
+                <div class="page-header">
+                    <h1>Shop All Products</h1>
+                    <div class="filters">
+                        <select id="categoryFilter" onchange="filterProducts()">
+                            <option value="">All Categories</option>
+                            <option value="shampoo">Shampoo</option>
+                            <option value="conditioner">Conditioner</option>
+                            <option value="treatment">Treatment</option>
+                            <option value="styling">Styling</option>
+                        </select>
+                        <select id="sortFilter" onchange="sortProducts()">
+                            <option value="featured">Featured</option>
+                            <option value="price-low">Price: Low to High</option>
+                            <option value="price-high">Price: High to Low</option>
+                            <option value="name">Name A-Z</option>
+                        </select>
+                    </div>
+                </div>
+                <div id="productsGrid" class="products-grid">
+                    <!-- Products will be dynamically loaded here -->
+                    <div class="product-card" data-category="shampoo" data-price="24.99" data-name="Biotin B-Complex Shampoo">
+                        <div class="product-image">
+                            <img src="https://lusetabeauty.com/cdn/shop/products/BiotinShampoo_500x.jpg?v=1652116775" alt="Biotin B-Complex Shampoo">
+                            <div class="product-overlay">
+                                <button class="wishlist-btn" onclick="toggleWishlistItem(this)">
+                                    <i class="far fa-heart"></i>
+                                </button>
+                                <button class="quick-view-btn" onclick="showProductDetails('biotin-shampoo')">
+                                    Quick View
+                                </button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Biotin B-Complex Shampoo</h3>
+                            <p class="product-description">Thickening and strengthening formula</p>
+                            <div class="product-price">$24.99</div>
+                            <button class="add-to-cart-btn" onclick="addToCart('biotin-shampoo', 'Biotin B-Complex Shampoo', 24.99, 'https://lusetabeauty.com/cdn/shop/products/BiotinShampoo_500x.jpg?v=1652116775')">
+                                ADD TO CART
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="product-card" data-category="conditioner" data-price="24.99" data-name="Biotin B-Complex Conditioner">
+                        <div class="product-image">
+                            <img src="https://lusetabeauty.com/cdn/shop/products/BiotinConditioner_500x.jpg?v=1652116775" alt="Biotin B-Complex Conditioner">
+                            <div class="product-overlay">
+                                <button class="wishlist-btn" onclick="toggleWishlistItem(this)">
+                                    <i class="far fa-heart"></i>
+                                </button>
+                                <button class="quick-view-btn" onclick="showProductDetails('biotin-conditioner')">
+                                    Quick View
+                                </button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Biotin B-Complex Conditioner</h3>
+                            <p class="product-description">Nourishing and thickening formula</p>
+                            <div class="product-price">$24.99</div>
+                            <button class="add-to-cart-btn" onclick="addToCart('biotin-conditioner', 'Biotin B-Complex Conditioner', 24.99, 'https://lusetabeauty.com/cdn/shop/products/BiotinConditioner_500x.jpg?v=1652116775')">
+                                ADD TO CART
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="product-card" data-category="shampoo" data-price="22.99" data-name="Argan Oil Shampoo">
+                        <div class="product-image">
+                            <img src="https://lusetabeauty.com/cdn/shop/products/ArganOil_Shampoo_500x.jpg?v=1652116775" alt="Argan Oil Shampoo">
+                            <div class="product-overlay">
+                                <button class="wishlist-btn" onclick="toggleWishlistItem(this)">
+                                    <i class="far fa-heart"></i>
+                                </button>
+                                <button class="quick-view-btn" onclick="showProductDetails('argan-shampoo')">
+                                    Quick View
+                                </button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Argan Oil Shampoo</h3>
+                            <p class="product-description">Moisturizing and nourishing formula</p>
+                            <div class="product-price">$22.99</div>
+                            <button class="add-to-cart-btn" onclick="addToCart('argan-shampoo', 'Argan Oil Shampoo', 22.99, 'https://lusetabeauty.com/cdn/shop/products/ArganOil_Shampoo_500x.jpg?v=1652116775')">
+                                ADD TO CART
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="product-card" data-category="conditioner" data-price="22.99" data-name="Argan Oil Conditioner">
+                        <div class="product-image">
+                            <img src="https://lusetabeauty.com/cdn/shop/products/ArganOil_Conditioner_500x.jpg?v=1652116775" alt="Argan Oil Conditioner">
+                            <div class="product-overlay">
+                                <button class="wishlist-btn" onclick="toggleWishlistItem(this)">
+                                    <i class="far fa-heart"></i>
+                                </button>
+                                <button class="quick-view-btn" onclick="showProductDetails('argan-conditioner')">
+                                    Quick View
+                                </button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Argan Oil Conditioner</h3>
+                            <p class="product-description">Deep moisturizing treatment</p>
+                            <div class="product-price">$22.99</div>
+                            <button class="add-to-cart-btn" onclick="addToCart('argan-conditioner', 'Argan Oil Conditioner', 22.99, 'https://lusetabeauty.com/cdn/shop/products/ArganOil_Conditioner_500x.jpg?v=1652116775')">
+                                ADD TO CART
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="product-card" data-category="shampoo" data-price="23.99" data-name="Color Care Shampoo">
+                        <div class="product-image">
+                            <img src="https://lusetabeauty.com/cdn/shop/products/ColorCare_Shampoo_500x.jpg?v=1652116775" alt="Color Care Shampoo">
+                            <div class="product-overlay">
+                                <button class="wishlist-btn" onclick="toggleWishlistItem(this)">
+                                    <i class="far fa-heart"></i>
+                                </button>
+                                <button class="quick-view-btn" onclick="showProductDetails('color-shampoo')">
+                                    Quick View
+                                </button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Color Care Shampoo</h3>
+                            <p class="product-description">Sulfate-free color protection</p>
+                            <div class="product-price">$23.99</div>
+                            <button class="add-to-cart-btn" onclick="addToCart('color-shampoo', 'Color Care Shampoo', 23.99, 'https://lusetabeauty.com/cdn/shop/products/ColorCare_Shampoo_500x.jpg?v=1652116775')">
+                                ADD TO CART
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="product-card" data-category="conditioner" data-price="23.99" data-name="Color Care Conditioner">
+                        <div class="product-image">
+                            <img src="https://lusetabeauty.com/cdn/shop/products/ColorCare_Conditioner_500x.jpg?v=1652116775" alt="Color Care Conditioner">
+                            <div class="product-overlay">
+                                <button class="wishlist-btn" onclick="toggleWishlistItem(this)">
+                                    <i class="far fa-heart"></i>
+                                </button>
+                                <button class="quick-view-btn" onclick="showProductDetails('color-conditioner')">
+                                    Quick View
+                                </button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Color Care Conditioner</h3>
+                            <p class="product-description">Color-safe hydrating formula</p>
+                            <div class="product-price">$23.99</div>
+                            <button class="add-to-cart-btn" onclick="addToCart('color-conditioner', 'Color Care Conditioner', 23.99, 'https://lusetabeauty.com/cdn/shop/products/ColorCare_Conditioner_500x.jpg?v=1652116775')">
+                                ADD TO CART
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="product-card" data-category="treatment" data-price="29.99" data-name="Repair Hair Mask">
+                        <div class="product-image">
+                            <img src="https://lusetabeauty.com/cdn/shop/products/RepairMask_500x.jpg?v=1652116775" alt="Repair Hair Mask">
+                            <div class="product-overlay">
+                                <button class="wishlist-btn" onclick="toggleWishlistItem(this)">
+                                    <i class="far fa-heart"></i>
+                                </button>
+                                <button class="quick-view-btn" onclick="showProductDetails('repair-mask')">
+                                    Quick View
+                                </button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Repair Hair Mask</h3>
+                            <p class="product-description">Intensive repair treatment</p>
+                            <div class="product-price">$29.99</div>
+                            <button class="add-to-cart-btn" onclick="addToCart('repair-mask', 'Repair Hair Mask', 29.99, 'https://lusetabeauty.com/cdn/shop/products/RepairMask_500x.jpg?v=1652116775')">
+                                ADD TO CART
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="product-card" data-category="styling" data-price="19.99" data-name="Hair Oil Serum">
+                        <div class="product-image">
+                            <img src="https://lusetabeauty.com/cdn/shop/products/HairOilSerum_500x.jpg?v=1652116775" alt="Hair Oil Serum">
+                            <div class="product-overlay">
+                                <button class="wishlist-btn" onclick="toggleWishlistItem(this)">
+                                    <i class="far fa-heart"></i>
+                                </button>
+                                <button class="quick-view-btn" onclick="showProductDetails('hair-serum')">
+                                    Quick View
+                                </button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Hair Oil Serum</h3>
+                            <p class="product-description">Shine and smoothing treatment</p>
+                            <div class="product-price">$19.99</div>
+                            <button class="add-to-cart-btn" onclick="addToCart('hair-serum', 'Hair Oil Serum', 19.99, 'https://lusetabeauty.com/cdn/shop/products/HairOilSerum_500x.jpg?v=1652116775')">
+                                ADD TO CART
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Product Details Page -->
+        <div id="productDetailsPage" class="page">
+            <div class="container">
+                <button class="back-btn" onclick="showPage('shop')">
+                    <i class="fas fa-arrow-left"></i> Back to Shop
+                </button>
+                <div id="productDetailsContent" class="product-details-content"></div>
+            </div>
+        </div>
+
+        <!-- Other Pages -->
+        <div id="aboutPage" class="page">
+            <div class="container">
+                <h1>About LUSETA</h1>
+                <p>Premium hair care products crafted with natural ingredients...</p>
+            </div>
+        </div>
+
+        <div id="rewardsPage" class="page">
+            <div class="container">
+                <h1>Rewards Program</h1>
+                <p>Join our loyalty program and earn points with every purchase...</p>
+            </div>
+        </div>
+
+        <div id="testimonialsPage" class="page">
+            <div class="container">
+                <h1>Customer Testimonials</h1>
+                <p>See what our customers are saying...</p>
+            </div>
+        </div>
+
+        <div id="blogPage" class="page">
+            <div class="container">
+                <h1>Beauty Blog</h1>
+                <p>Tips, tricks, and hair care advice...</p>
+            </div>
+        </div>
+
+        <div id="quizPage" class="page">
+            <div class="container">
+                <h1>Hair Care Quiz</h1>
+                <p>Find your perfect hair care routine...</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Cart Sidebar -->
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h3>Shopping Cart</h3>
+            <button class="close-cart" onclick="toggleCart()">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="cart-content" id="cartContent">
+            <div class="empty-cart">
+                <i class="fas fa-shopping-bag"></i>
+                <p>Your cart is empty</p>
+            </div>
+        </div>
+        <div class="cart-footer" id="cartFooter" style="display: none;">
+            <div class="cart-total">
+                <span>Total: $<span id="cartTotal">0.00</span></span>
+            </div>
+            <button class="checkout-btn" onclick="checkout()">
+                CHECKOUT
+            </button>
+        </div>
+    </div>
+
+    <!-- Overlay -->
+    <div class="overlay" id="overlay" onclick="closeOverlays()"></div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <div class="logo-icon">
+                            <div class="logo-circle"></div>
+                        </div>
+                        <span class="logo-text">LUSETA</span>
+                    </div>
+                    <p>Premium hair care products crafted with natural ingredients for beautiful, healthy hair.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#" onclick="showPage('shop')">Shop</a></li>
+                        <li><a href="#" onclick="showPage('about')">About Us</a></li>
+                        <li><a href="#" onclick="showPage('blog')">Blog</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Customer Care</h4>
+                    <ul>
+                        <li><a href="#">Shipping Info</a></li>
+                        <li><a href="#">Returns</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Size Guide</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 LUSETA Beauty. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
