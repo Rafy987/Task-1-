@@ -1,0 +1,1 @@
+export const NEWS_API_KEY = (typeof import.meta !== 'undefined' && import.meta.env && import.meta.env.VITE_NEWS_API_KEY) || 'YOUR_NEWSAPI_KEY_HERE';
